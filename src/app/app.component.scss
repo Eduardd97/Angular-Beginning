@@ -1,0 +1,20 @@
+main {
+    width: 100%;
+  
+    h1 {
+      color: violet;
+    }
+  
+    .names {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  
+      div {
+          background: black;
+          border-radius: 20px;
+          color: white;
+          padding: 5px;
+      }
+    }
+  }

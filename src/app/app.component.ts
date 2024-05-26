@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserType } from '../types';
 import { NgIf } from '@angular/common';
+import { UsersComponent } from './users/users.component';
 
 // @ - Decorator
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf],
+  imports: [RouterOutlet, NgIf, UsersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -60,7 +61,6 @@ export class AppComponent {
   increaseAddTen() {
     this.counter = this.counter + 10;
     this.tooBigValueCounter();
-    
   }
 
   decrease() {

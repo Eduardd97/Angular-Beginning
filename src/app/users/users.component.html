@@ -1,0 +1,35 @@
+<div class="users-wrapper">
+    @for (user of users; track user) {
+        @if (selectedUser != null && user.email === selectedUser.email) {
+            <div class="user-card-selected" (click)="onUserClick(user)">
+                <h4>{{ selectedUser.email }}</h4> <!-- Замените user.email на selectedUser.email -->
+                <p>{{ selectedUser.password }}</p> <!-- Замените user.password на selectedUser.password -->
+                <button (click)="deleteUser(user)">Delete User</button>
+            </div>
+        } @else {
+            <div class="user-card" (click)="onUserClick(user)">
+                <h4>{{ user.email }}</h4>
+                <p>{{ user.password }}</p>
+            </div>
+        } 
+    }
+</div>
+
+
+<!-- <h1>Users:</h1>
+
+<div class="users-wrapper">
+    <ng-container *ngFor="let user of users">
+        <div *ngIf="selectedUser && user.email === selectedUser.email; else otherUser" class="user-card-selected" (click)="onUserClick(user)">
+            <h4>{{ user.email }}</h4>
+            <p>{{ user.password }}</p>
+            <button (click)="deleteUser(user)">Delete User</button>
+        </div>
+        <ng-template #otherUser>
+            <div class="user-card" (click)="onUserClick(user)">
+                <h4>{{ user.email }}</h4>
+                <p>{{ user.password }}</p>
+            </div>
+        </ng-template>
+    </ng-container>
+</div> -->

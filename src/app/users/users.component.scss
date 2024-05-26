@@ -1,0 +1,32 @@
+.users-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+  
+    .user-card {
+      width: 300px;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background: grey;
+      border-radius: 11px;
+      transition: 0.3s all;
+      cursor: pointer;
+    }
+  
+    .user-card-selected {
+      width: 300px;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background: lightgrey;
+      border-radius: 11px;
+      transition: 0.3s all;
+      cursor: pointer;
+    }
+  }
